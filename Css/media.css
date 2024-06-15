@@ -1,0 +1,101 @@
+
+@media (max-width:991px) {
+    .upcoming-card .card-meta{
+        bottom: -40%;
+    }
+    .footer-brand{
+        margin-block-end: 40px;
+    }
+    .contact .info { margin-block-end: 40px; }
+    .contact .info ,
+    .contact .form {
+        flex-basis: 100%;
+    }
+
+}
+@media (max-width:767px) { /*Medium devices => Taplets*/
+    .header .btn{
+        display: none;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        width: 80%;
+        background-color: var(--bg-oxford-blue);
+        margin: 0 auto;
+        clip-path: var(--clip-path-1);
+        visibility: hidden;
+        transition: clip-path 500ms var(--cubic-out);
+    }
+    .navbar ul{
+        flex-direction: column;
+    }
+    .navbar.active{
+        clip-path: var(--clip-path-2);
+        visibility: visible;
+        z-index: 2;
+    }
+    .nav-link{
+        padding: 12px 25px;
+        text-transform: uppercase;
+        font-size: var(--fontSize-7);
+        font-weight: var(--weight-semiBold);
+        color: var(--text-white);
+    }
+    .nav-item{
+        width: 100%;
+        border-block-start: 1px solid var(--border-space-cadet);
+    }
+    .nav-item:last-child{
+        border-block-end: 1px solid var(--border-space-cadet);
+    }
+    .nav-toggle-btn .line{
+        display: block;
+    }
+    .upcoming-item{
+        flex-direction: column;
+    }
+    .upcoming-card .card-meta{
+        bottom: 0px;
+    }
+    .upcoming-item:not(:last-child){
+        margin-block-end: 90px;
+    }
+    .upcoming-time{ margin-block: 0; }
+
+}
+@media (max-width: 567px) {
+    .upcoming-card .card-meta {
+        bottom: -5px;
+    }
+}       
+@media (max-width: 367px) {
+    .upcoming-card .card-meta {
+        bottom: -25%;
+    }
+}       
+
+
+/* start grid system */
+
+@media (min-width:576px) { /*small devices => land scape phones*/
+    .container{
+        width: 540px;
+    }
+}
+@media (min-width:768px) { /*Medium devices => Taplets*/
+    .container{
+        width: 720px;
+    }
+}
+@media (min-width:992px) { /*Desktop*/
+    .container{
+        width: 960px;
+    }
+}
+@media (min-width:1200px) { /*Large screen*/
+    .container{
+        width: 1140px;
+    }
+}
+/* End grid system */ 
